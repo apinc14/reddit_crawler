@@ -1,0 +1,14 @@
+services:
+  reddit-crawler:
+    container_name: reddit-crawler
+    build: .
+    restart: always
+    environment:
+      DB_HOST: database-db-1  
+      DB_USER: root
+      DB_PASS: snook1sm00sh0Osmoozh
+      DB_NAME: weblyticsDB
+networks:
+  default:
+    external:
+      name: weblyticsHome

@@ -1,0 +1,12 @@
+praw
+pymysql
+datetime 
+transformers 
+pandas
+nltk
+rake_nltk
+
+pillow
+io 
+requests 
+urllib
