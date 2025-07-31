@@ -1,11 +1,12 @@
 import os
 import pymysql
 
-host = 'localhost'  # Use the host machine's IP address or hostname
-port = 3306  # Replace with the host machine's port (if forwarded)
-user = 'root'
-password = 'snook1sm00sh0Osmoozh'
-db_name = 'weblyticsDB'
+
+host = os.environ.get('crawler_host', 'localhost')  # Use environment variable or default to localhost)
+port =  os.environ.get("crawler_port")
+user = os.environ.get("crawler_user")
+password =  os.environ.get("crawler_pass")
+db_name =  os.environ.get("crawler_db")
 
 connection = pymysql.connect(
     host=host,
